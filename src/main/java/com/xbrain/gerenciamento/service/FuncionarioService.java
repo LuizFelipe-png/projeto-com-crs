@@ -23,5 +23,15 @@ public class FuncionarioService {
     public List<FuncionarioBean> lerTodos(){
         return repository.lerTodos();
         
+    } public FuncionarioBean lerPorId(int id){
+        return repository.lerPorId(id);
+    }
+    
+    public void editarFuncionario(FuncionarioBean funcionario) {
+        repository.atualizar(funcionario);
+    }
+    
+    public void criarFuncionario(FuncionarioBean funcionario){
+        repository.criar(funcionario);
     }
 }
